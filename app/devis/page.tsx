@@ -1,5 +1,9 @@
 'use client'
-import { useState } from 'react'
+import React, { useState } from 'react'
+
+// Note: metadata n'est pas exportable depuis un composant 'use client'.
+// Pour le SEO de cette page, ajoutez un layout.tsx dans app/devis/ si nécessaire.
+
 
 export default function DevisForm() {
   const [form, setForm] = useState({
@@ -13,18 +17,18 @@ export default function DevisForm() {
   const [success, setSuccess] = useState('')
   const [error, setError] = useState('')
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
     setError('')
     setSuccess('')
 
     try {
-      const res = await fetch('http://localhost:8000/api/devis', {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/devis`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -45,8 +49,8 @@ if (!res.ok) {
         service: '',
         description: '',
       })
-    } catch (err:any) {
-      setError(err.message || 'Une erreur est survenue. Veuillez réessayer.')
+    } catch (err: unknown) {
+      setError((err instanceof Error ? err.message : null) || 'Une erreur est survenue. Veuillez réessayer.')
     } finally {
       setLoading(false)
     }

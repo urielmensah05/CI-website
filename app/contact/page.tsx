@@ -1,7 +1,13 @@
 // ==============================
 // app/contact/page.tsx
 // ==============================
+import type { Metadata } from "next";
 import { MapPin, Phone, Mail } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Nous Contacter – Central Innovation Plus",
+  description: "Contactez l'équipe Central Innovation Plus à Abidjan, Cocody. Téléphone, email et localisation disponibles.",
+};
 
 export default function ContactPage() {
   return (
@@ -57,7 +63,7 @@ export default function ContactPage() {
             <Mail className="w-8 h-8 mx-auto mb-4 text-orange-600" />
             <h4 className="text-xl font-bold mb-3">Email</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
-              recrutement@ci-plus<br />
+              recrutement@ci-plus.ci<br />
               etudes@plus.ci<br />
               info@ci-plus.ci
             </p>

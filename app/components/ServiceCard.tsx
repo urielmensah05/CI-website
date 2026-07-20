@@ -1,6 +1,9 @@
 // ==============================
-// components/ServiceCard.tsx
+// components/ServiceCard.tsx — même style que les cartes équipe
 // ==============================
+import Image from "next/image";
+import React from "react";
+
 type Props = {
   title: string;
   description: string;
@@ -15,30 +18,37 @@ export default function ServiceCard({
   children,
 }: Props) {
   return (
-    <div className="group bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-      
+    <div className="group relative bg-white rounded-3xl border border-gray-100 shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden">
+
+      {/* Image — même hauteur & animation que les cartes équipe */}
       {image && (
-        <div className="h-70 w-full overflow-hidden">
-          <img
+        <div className="relative h-80 w-full overflow-hidden">
+          <Image
             src={image}
             alt={title}
-            className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
+          {/* Gradient overlay au hover */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </div>
       )}
 
+      {/* Contenu */}
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-3">
+        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">
           {title}
         </h3>
-
-        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+        <p className="text-sm text-gray-500 leading-relaxed mb-4">
           {description}
         </p>
 
-        {/* Extension libre (témoignages, listes, CTA…) */}
+        {/* Liste, témoignages, etc. */}
         {children}
       </div>
+
+      {/* Ring orange au hover — même que les cartes équipe */}
+      <div className="absolute inset-0 rounded-3xl ring-1 ring-transparent group-hover:ring-orange-200 pointer-events-none transition" />
     </div>
   );
 }

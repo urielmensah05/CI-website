@@ -14,6 +14,7 @@ type StepCardProps = {
   description: string;
   Icon: React.ElementType;
   testimonials: Testimonial[];
+  link?: string;
 };
 
 export default function StepCard({

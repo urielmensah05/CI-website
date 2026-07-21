@@ -177,7 +177,7 @@ export default function HomePage() {
             title="Développement d'applications multi-plateformes"
             description="Apprenez à concevoir et déployer des applications web et mobiles modernes, utilisées en entreprise."
             testimonials={[
-              { name: "Yao K.", role: "Développeur junior – Abidjan", message: "Formation très pratique, j'ai pu décrocher mes premiers projets.", image: "/images/testimonials/3(2).jpg" },
+              { name: "Yao K.", role: "Développeur junior – Abidjan", message: "Formation très pratique, j'ai pu décrocher mes premiers projets.", image: "/images/testimonials/3.jpg"},
               { name: "Aminata D.", role: "Entrepreneure", message: "J'ai enfin compris comment structurer une vraie application.", image: "/images/testimonials/1.jpg" },
             ]}
           />

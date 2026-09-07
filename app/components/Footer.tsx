@@ -9,7 +9,7 @@ export default function Footer() {
         <div>
           <h3 className="text-2xl font-extrabold text-orange-600">CI+</h3>
           <p className="mt-4 text-gray-400 text-sm">
-            Central Innovation Plus accompagne les entreprises et les talents dans la création de solutions digitales, la formation et l’innovation durable.
+            Central Innovation Plus accompagne les entreprises et les talents dans la création de solutions digitales, les solutions et l'innovation durable.
           </p>
         </div>
 
@@ -19,7 +19,7 @@ export default function Footer() {
           <ul className="space-y-2 text-gray-400">
             <li><a href="/" className="hover:text-orange-600">Accueil</a></li>
             <li><a href="/services" className="hover:text-orange-600">Services</a></li>
-            <li><a href="/formations" className="hover:text-orange-600">Formations</a></li>
+            <li><a href="/solutions" className="hover:text-orange-600">Solutions</a></li>
             <li><a href="/equipe" className="hover:text-orange-600">Équipe</a></li>
             <li><a href="/devis" className="hover:text-orange-600">Devis</a></li>
             <li><a href="/contact" className="hover:text-orange-600">Contact</a></li>
@@ -30,9 +30,9 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-4">Contact</h4>
           <ul className="space-y-2 text-gray-400 text-sm">
-            <li>📍 Abidjan, Cocody Palmeraie</li>
-            <li>📞 +225 00 00 00 00</li>
-            <li>✉️ contact@ci-plus.net</li>
+            <li>Abidjan, Cocody Palmeraie</li>
+            <li>Tél. +225 2722270674</li>
+            <li>contact@ci-plus.net</li>
           </ul>
         </div>
 
@@ -50,18 +50,20 @@ export default function Footer() {
               OK
             </button>
           </form>
+{false && (
+  <div className="flex gap-4 mt-6 text-gray-400">
+    <a href="#" className="hover:text-orange-600">LinkedIn</a>
+    <a href="#" className="hover:text-orange-600">Facebook</a>
+    <a href="#" className="hover:text-orange-600">Instagram</a>
+  </div>
+)}
 
-          <div className="flex gap-4 mt-6 text-gray-400">
-            <a href="#" className="hover:text-orange-600">LinkedIn</a>
-            <a href="#" className="hover:text-orange-600">Facebook</a>
-            <a href="#" className="hover:text-orange-600">Instagram</a>
-          </div>
         </div>
       </div>
 
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} Central Innovation Plus — Tous droits réservés.
+          <div className="max-w-7xl mx-auto px-6 py-6 text-center text-sm text-gray-500">
+          (c) {new Date().getFullYear()} Central Innovation Plus - Tous droits réservés.
         </div>
       </div>
     </footer>

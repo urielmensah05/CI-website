@@ -16,8 +16,8 @@ export default function EquipePage() {
 
   useEffect(() => {
     getEquipe()
-      .then((data) => {
-        setTeam(data.data ?? data);
+      .then((data: any) => {
+        setTeam(Array.isArray(data) ? data : (data?.data ?? []));
       })
       .catch((err) => console.error("API error:", err));
   }, []);

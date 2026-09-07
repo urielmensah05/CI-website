@@ -16,8 +16,8 @@ export const team: TeamMember[] = [
     image: "/images/testimonials/5.jpg",
   },
   {
-    name: "Richler Bohoussou",
-    role: "Juriste – Politologue avec plus de 30 ans d'expérience",
+    name: "Goh Gedeon",
+    role: "Ingenieur Informatique ",
     image: "/images/testimonials/7.jpg",
   },
   {

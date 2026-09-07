@@ -10,7 +10,7 @@ import { usePathname, useRouter } from "next/navigation";
 const NAV_LINKS = [
   { label: "Akwaba",         anchor: "akwaba" },
   { label: "Nos services",   anchor: "nos-services" },
-  { label: "Nos formations", anchor: "nos-formations" },
+  { label: "Nos solutions", anchor: "nos-solutions" },
   { label: "Notre équipe",   anchor: "notre-equipe" },
   { label: "Nos partenaires",anchor: "nos-partenaires" },
   { label: "Nous contacter", anchor: "nous-contacter" },

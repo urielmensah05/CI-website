@@ -20,7 +20,7 @@ export default async function ServicesPage() {
             Nos services
           </h1>
           <p className="text-gray-600 text-lg leading-relaxed">
-            Chez CENTRAL INNOVATION PLUS, nous comprenons que chaque projet est unique. Que vous recherchiez des solutions digitales innovantes, une logistique eficace, des opportunités immobilières exceptionnelles ou des services de santé de pointe, nous nous engageons à dépasser vos attentes.
+            Chez CENTRAL INNOVATION PLUS, nous comprenons que chaque projet est unique. Que vous recherchiez des solutions digitales innovantes, une logistique efficace, des opportunités immobilières exceptionnelles ou des services de santé de pointe, nous nous engageons à dépasser vos attentes.
 
 
           </p>

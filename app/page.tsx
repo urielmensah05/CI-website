@@ -58,7 +58,7 @@ export default function HomePage() {
               Nos services
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">
-              Chez CENTRAL INNOVATION PLUS, nous comprenons que chaque projet est unique. Que vous recherchiez des solutions digitales innovantes, une logistique eficace, des opportunités immobilières exceptionnelles ou des services de santé de pointe, nous nous engageons à dépasser vos attentes.
+              Chez CENTRAL INNOVATION PLUS, nous comprenons que chaque projet est unique. Que vous recherchiez des solutions digitales innovantes, une logistique efficace, des opportunités immobilières exceptionnelles ou des services de santé de pointe, nous nous engageons à dépasser vos attentes.
 
 
             </p>
@@ -158,11 +158,11 @@ export default function HomePage() {
 
       </section>
 
-      {/* ===== FORMATIONS ===== */}
-      <section id="nos-formations" className="py-24 bg-white">
+      {/* ===== SOLUTIONS ===== */}
+      <section id="nos-solutions" className="py-24 bg-white">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20 px-4">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">
-            Nos formations
+            Nos solutions
           </h2>
           <p className="mt-6 text-gray-600 text-base leading-relaxed">
             Des formations pratiques pour acquérir les compétences du numérique d&apos;aujourd&apos;hui.
@@ -176,10 +176,7 @@ export default function HomePage() {
             Icon={Code2}
             title="Développement d'applications multi-plateformes"
             description="Apprenez à concevoir et déployer des applications web et mobiles modernes, utilisées en entreprise."
-            testimonials={[
-              { name: "Yao K.", role: "Développeur junior – Abidjan", message: "Formation très pratique, j'ai pu décrocher mes premiers projets.", image: "/images/testimonials/3.jpg"},
-              { name: "Aminata D.", role: "Entrepreneure", message: "J'ai enfin compris comment structurer une vraie application.", image: "/images/testimonials/1.jpg" },
-            ]}
+            link="/solutions/solutions-details"
           />
 
           <StepCard
@@ -187,10 +184,7 @@ export default function HomePage() {
             Icon={Cuboid}
             title="Visualisation architecturale 3D"
             description="Maîtrisez la modélisation et le rendu 3D pour des projets architecturaux réalistes et professionnels."
-            testimonials={[
-              { name: "Yao K.", role: "Développeur junior – Abidjan", message: "Formation très pratique, j'ai pu décrocher mes premiers projets.", image: "/images/testimonials/5.jpg" },
-              { name: "Aminata D.", role: "Entrepreneure", message: "J'ai enfin compris comment structurer une vraie application.", image: "/images/testimonials/6.jpg" },
-            ]}
+            link="/solutions/solutions-details"
           />
 
           <StepCard
@@ -198,10 +192,7 @@ export default function HomePage() {
             Icon={GraduationCap}
             title="Formation professionnelle & coaching"
             description="Développez vos compétences techniques et votre posture professionnelle grâce à un accompagnement personnalisé."
-            testimonials={[
-              { name: "Yao K.", role: "Développeur junior – Abidjan", message: "Formation très pratique, j'ai pu décrocher mes premiers projets.", image: "/images/testimonials/4.jpg" },
-              { name: "Aminata D.", role: "Entrepreneure", message: "J'ai enfin compris comment structurer une vraie application.", image: "/images/testimonials/2.jpg" },
-            ]}
+            link="/solutions/solutions-details"
           />
 
           <StepCard
@@ -209,10 +200,7 @@ export default function HomePage() {
             Icon={Settings}
             title="Assistance et intervention logicielle"
             description="Maintenance, dépannage et optimisation de solutions logicielles existantes."
-            testimonials={[
-              { name: "Yao K.", role: "Développeur junior – Abidjan", message: "Formation très pratique, j'ai pu décrocher mes premiers projets.", image: "/images/testimonials/7.jpg" },
-              { name: "Aminata D.", role: "Entrepreneure", message: "J'ai enfin compris comment structurer une vraie application.", image: "/images/testimonials/4.jpg" },
-            ]}
+            link="/solutions/solutions-details"
           />
 
         </div>
@@ -236,7 +224,7 @@ export default function HomePage() {
               Notre équipe
             </h2>
             <p className="mt-6 text-gray-600 text-base leading-relaxed">
-              Nous sommes des jeunes Cadres et Entrepreneurs Ivoiriens, tous diplômés et forts d'expériences professionnelles diverses.
+              Nous sommes des jeunes Cadres et Entrepreneurs Ivoiriens, tous diplômés et forts d&apos;expériences professionnelles diverses.
 
 
             </p>
@@ -292,27 +280,26 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Carte Google Maps */}
-          <div className="mb-16 rounded-xl overflow-hidden border border-gray-200 shadow-sm">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.7540491578766!2d-3.9984179250167022!3d5.301024994677296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eeb25c0b6899%3A0x9b9c9f6facd94a8a!2sSOS%20INFORMATIQUE!5e0!3m2!1sfr!2sci!4v1755653678044!5m2!1sfr!2sci"
-              className="w-full h-[400px] border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+<div className="mb-16 overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-sm">
+  <div className="border-b border-gray-200 bg-white px-6 py-4">
+    <h3 className="text-lg font-semibold text-gray-900">Notre localisation</h3>
+    <p className="mt-1 text-sm text-gray-600">
+      Imm. Riviera palmeraie, face Paris baguette, 2e étage, Cocody
+    </p>
+  </div>
+  <iframe
+    src="https://www.google.com/maps?q=Central+innovations+Plus,+5.3677636,-3.9596101&z=17&output=embed"
+    className="w-full h-[400px] border-0"
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Localisation de Central Innovation Plus"
+  />
+</div>
 
           {/* Blocs contact */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            <div className="text-center bg-gray-50 border border-gray-200 rounded-xl p-8 hover:shadow-lg transition">
-              <MapPin className="w-8 h-8 mx-auto mb-4 text-orange-600" />
-              <h4 className="text-xl font-bold mb-3">Adresse</h4>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Imm. Riviera palmeraie, face Paris baguette, 2e Etage<br />
-                Cocody – 09 BP 4484 Abidjan 09<br />
-                Abidjan – Côte d&apos;Ivoire
-              </p>
-            </div>
+            
 
             <div className="text-center bg-gray-50 border border-gray-200 rounded-xl p-8 hover:shadow-lg transition">
               <Phone className="w-8 h-8 mx-auto mb-4 text-orange-600" />

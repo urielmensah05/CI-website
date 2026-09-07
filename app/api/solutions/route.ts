@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 
-const formations = [
+const solutions = [
   {
     id: 1,
     titre: "Développement web",
-    description: "Formations pratiques pour maîtriser HTML, CSS, React et Next.js.",
+    description: "Solutions pratiques pour maîtriser HTML, CSS, React et Next.js.",
   },
   {
     id: 2,
@@ -19,5 +19,5 @@ const formations = [
 ];
 
 export async function GET() {
-  return NextResponse.json(formations);
+  return NextResponse.json(solutions);
 }

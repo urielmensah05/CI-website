@@ -1,11 +1,11 @@
 // ==============================
-// app/formations/formations-details/page.tsx
+// app/solutions/solutions-details/page.tsx
 // ==============================
-export default function FormationDetailsPage() {
+export default function SolutionDetailsPage() {
   return (
     <section className="pt-40 pb-24 bg-gray-50">
       <div className="max-w-5xl mx-auto px-6">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center">Détails de la Formation</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center">Détails de la Solution</h1>
         <p className="mt-6 text-center text-gray-600">
           Découvrez le programme détaillé, les compétences que vous allez acquérir et les perspectives professionnelles.
         </p>

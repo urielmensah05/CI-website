@@ -12,7 +12,7 @@ export default function PartenairesCarousel() {
 
   useEffect(() => {
     getPartenaires()
-      .then((data) => setPartenaires(data.data ?? data))
+      .then((data: any) => setPartenaires(Array.isArray(data) ? data : (data?.data ?? [])))
       .catch((err) => console.error("API error:", err));
   }, []);
 
@@ -66,12 +66,14 @@ export default function PartenairesCarousel() {
           >
             <img
               src={
-                p.logo?.startsWith("http")
+                !p.logo
+                  ? "/images/hero.jpg"
+                  : p.logo.startsWith("http") || p.logo.startsWith("data:") || p.logo.startsWith("/")
                   ? p.logo
                   : `http://localhost:8000/${p.logo}`
               }
               alt={p.nom}
-              className="w-16 h-16 object-contain mx-auto mb-4 rounded-full"
+              className="w-16 h-16 object-contain mx-auto mb-4 rounded-xl"
             />
             <h3 className="font-bold text-gray-900">{p.nom}</h3>
             {p.lien && (

@@ -1,0 +1,20 @@
+services:
+  ci-plus-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+        - NEXT_PUBLIC_BACKEND_URL=${NEXT_PUBLIC_BACKEND_URL}
+    container_name: ci_plus_app
+    restart: always
+    ports:
+      - "3019:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - ci_plus_network
+
+networks:
+  ci_plus_network:
+    external: true
